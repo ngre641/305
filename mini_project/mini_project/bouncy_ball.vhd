@@ -43,7 +43,7 @@ begin
 	if (rising_edge(vert_sync)) then			
 		-- Bounce off top or bottom of the screen
 		ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
-		if (button_click) then
+		if (button_click = '1') then
 			ball_y_motion <= CONV_STD_LOGIC_VECTOR(10,10);
 		end if;
 		
