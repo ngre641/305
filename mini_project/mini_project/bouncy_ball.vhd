@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, button_click	: IN std_logic;
+		( pb1, pb2, clk, vert_sync, button_click, reset	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic);		
 END bouncy_ball;
@@ -23,7 +23,7 @@ BEGIN
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
+ball_x_pos <= CONV_STD_LOGIC_VECTOR(180,11);
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -37,19 +37,25 @@ Green <= (not pb2) and (not ball_on);
 Blue <=  not ball_on;
 
 
-Move_Ball: process (vert_sync)  	
+Move_Ball: process (vert_sync, reset)
 begin
-	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then			
-		-- Bounce off top or bottom of the screen
-		ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
-		if (button_click = '1') then
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(10,10);
-		end if;
-		
-		-- Compute next ball Y position
-		ball_y_pos <= ball_y_pos + ball_y_motion;
-	end if;
+    if (reset = '0') then
+        -- Set your starting point here
+        ball_y_pos <= CONV_STD_LOGIC_VECTOR(240, 10); -- Start near top
+ 
+    elsif (rising_edge(vert_sync)) then
+        -- JUMP LOGIC
+        if (button_click = '1') then
+            ball_y_pos <= ball_y_pos - CONV_STD_LOGIC_VECTOR(10, 10);
+            
+        -- FALLING LOGIC (with bottom edge stop at 470)
+        elsif (ball_y_pos < CONV_STD_LOGIC_VECTOR(470, 10)) then
+            ball_y_pos <= ball_y_pos + CONV_STD_LOGIC_VECTOR(4, 10);
+		else 
+			ball_y_pos <= CONV_STD_LOGIC_VECTOR(470, 10);
+        end if;
+ 
+    end if;
 end process Move_Ball;
 
 END behavior;

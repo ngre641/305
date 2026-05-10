@@ -1,6 +1,6 @@
 Analysis & Synthesis report for mini_project
-Fri May 08 16:11:09 2026
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Sun May 10 11:32:35 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
 ---------------------
@@ -29,33 +29,34 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
 
 
 
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 08 16:11:09 2026           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Analysis & Synthesis Status     ; Successful - Sun May 10 11:32:35 2026           ;
+; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; mini_project                                    ;
 ; Top-level Entity Name           ; mini_project                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 121                                             ;
-; Total pins                      ; 10                                              ;
+; Total registers                 ; 120                                             ;
+; Total pins                      ; 11                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -160,16 +161,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -178,17 +178,17 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ; Library ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
-; vga_sync.vhd                     ; yes             ; User VHDL File                     ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/vga_sync.vhd        ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                     ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd           ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                     ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/bouncy_ball.vhd     ;         ;
-; altpll0.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd         ;         ;
-; mini_project.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mini_project.bdf    ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altpll.tdf                          ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                      ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_pll.inc                     ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                   ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                   ;         ;
-; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction        ; C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/db/altpll0_altpll.v ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/vga_sync.vhd        ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd           ;         ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/bouncy_ball.vhd     ;         ;
+; altpll0.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd         ;         ;
+; mini_project.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mini_project.bdf    ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altpll.tdf                     ;         ;
+; aglobal251.inc                   ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc                 ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/stratix_pll.inc                ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/stratixii_pll.inc              ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/cycloneii_pll.inc              ;         ;
+; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction        ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/db/altpll0_altpll.v ;         ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
@@ -197,18 +197,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                       ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 82                                                                                          ;
+; Estimate of Logic utilization (ALMs needed) ; 91                                                                                          ;
 ;                                             ;                                                                                             ;
-; Combinational ALUT usage for logic          ; 137                                                                                         ;
+; Combinational ALUT usage for logic          ; 156                                                                                         ;
 ;     -- 7 input functions                    ; 1                                                                                           ;
 ;     -- 6 input functions                    ; 14                                                                                          ;
-;     -- 5 input functions                    ; 22                                                                                          ;
-;     -- 4 input functions                    ; 20                                                                                          ;
-;     -- <=3 input functions                  ; 80                                                                                          ;
+;     -- 5 input functions                    ; 34                                                                                          ;
+;     -- 4 input functions                    ; 22                                                                                          ;
+;     -- <=3 input functions                  ; 85                                                                                          ;
 ;                                             ;                                                                                             ;
-; Dedicated logic registers                   ; 121                                                                                         ;
+; Dedicated logic registers                   ; 120                                                                                         ;
 ;                                             ;                                                                                             ;
-; I/O pins                                    ; 10                                                                                          ;
+; I/O pins                                    ; 11                                                                                          ;
 ;                                             ;                                                                                             ;
 ; Total DSP Blocks                            ; 0                                                                                           ;
 ;                                             ;                                                                                             ;
@@ -217,8 +217,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                                             ;
 ; Maximum fan-out node                        ; altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|wire_generic_pll1_outclk ;
 ; Maximum fan-out                             ; 77                                                                                          ;
-; Total fan-out                               ; 825                                                                                         ;
-; Average fan-out                             ; 2.94                                                                                        ;
+; Total fan-out                               ; 902                                                                                         ;
+; Average fan-out                             ; 3.00                                                                                        ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------+
 
 
@@ -227,13 +227,13 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name    ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
-; |mini_project                            ; 137 (0)             ; 121 (0)                   ; 0                 ; 0          ; 10   ; 0            ; |mini_project                                                                    ; mini_project   ; work         ;
+; |mini_project                            ; 156 (0)             ; 120 (0)                   ; 0                 ; 0          ; 11   ; 0            ; |mini_project                                                                    ; mini_project   ; work         ;
 ;    |MOUSE:inst5|                         ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|MOUSE:inst5                                                        ; MOUSE          ; work         ;
 ;    |VGA_SYNC:inst3|                      ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|VGA_SYNC:inst3                                                     ; VGA_SYNC       ; work         ;
 ;    |altpll0:inst|                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst                                                       ; altpll0        ; work         ;
 ;       |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component                               ; altpll         ; work         ;
 ;          |altpll0_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ; altpll0_altpll ; work         ;
-;    |bouncy_ball:inst2|                   ; 46 (46)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|bouncy_ball:inst2                                                  ; bouncy_ball    ; work         ;
+;    |bouncy_ball:inst1|                   ; 65 (65)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|bouncy_ball:inst1                                                  ; bouncy_ball    ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -253,23 +253,20 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+----------------------------------------+------------------------------------------------+
-; Register name                          ; Reason for Removal                             ;
-+----------------------------------------+------------------------------------------------+
-; bouncy_ball:inst2|ball_y_motion[0]     ; Stuck at GND due to stuck port data_in         ;
-; bouncy_ball:inst2|ball_y_motion[1,3]   ; Stuck at VCC due to stuck port data_in         ;
-; MOUSE:inst5|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in         ;
-; MOUSE:inst5|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in         ;
-; MOUSE:inst5|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in         ;
-; MOUSE:inst5|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in         ;
-; MOUSE:inst5|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in         ;
-; bouncy_ball:inst2|ball_y_motion[4..9]  ; Merged with bouncy_ball:inst2|ball_y_motion[2] ;
-; bouncy_ball:inst2|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in         ;
-; VGA_SYNC:inst3|pixel_row[9]            ; Stuck at GND due to stuck port data_in         ;
-; Total Number of Removed Registers = 20 ;                                                ;
-+----------------------------------------+------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; MOUSE:inst5|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:inst5|CHAROUT[3]                 ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst5|CHAROUT[2]                 ; Stuck at VCC due to stuck port data_in ;
+; MOUSE:inst5|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst5|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in ;
+; bouncy_ball:inst1|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in ;
+; VGA_SYNC:inst3|pixel_row[9]            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -277,38 +274,44 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 121   ;
+; Total registers                              ; 120   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 25    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 71    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; MOUSE:inst5|send_char                  ; 3       ;
-; MOUSE:inst5|SHIFTOUT[3]                ; 1       ;
-; MOUSE:inst5|SHIFTOUT[5]                ; 1       ;
-; MOUSE:inst5|SHIFTOUT[6]                ; 1       ;
-; MOUSE:inst5|SHIFTOUT[7]                ; 1       ;
-; MOUSE:inst5|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 6 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; bouncy_ball:inst1|ball_y_pos[5]         ; 5       ;
+; bouncy_ball:inst1|ball_y_pos[4]         ; 5       ;
+; bouncy_ball:inst1|ball_y_pos[7]         ; 6       ;
+; bouncy_ball:inst1|ball_y_pos[6]         ; 6       ;
+; MOUSE:inst5|send_char                   ; 3       ;
+; MOUSE:inst5|SHIFTOUT[3]                 ; 1       ;
+; MOUSE:inst5|SHIFTOUT[5]                 ; 1       ;
+; MOUSE:inst5|SHIFTOUT[6]                 ; 1       ;
+; MOUSE:inst5|SHIFTOUT[7]                 ; 1       ;
+; MOUSE:inst5|SHIFTOUT[8]                 ; 1       ;
+; Total number of inverted registers = 10 ;         ;
++-----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |mini_project|VGA_SYNC:inst3|v_count[9] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[2] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |mini_project|VGA_SYNC:inst3|v_count[7]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -707,33 +710,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 121                         ;
-;     CLR               ; 1                           ;
+; arriav_ff             ; 120                         ;
+;     CLR               ; 10                          ;
 ;     ENA               ; 46                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 39                          ;
+;     plain             ; 29                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 137                         ;
-;     arith             ; 53                          ;
+; arriav_lcell_comb     ; 156                         ;
+;     arith             ; 61                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 42                          ;
-;         2 data inputs ; 10                          ;
+;         1 data inputs ; 57                          ;
+;         2 data inputs ; 3                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 83                          ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 20                          ;
-;         5 data inputs ; 22                          ;
+;     normal            ; 94                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 34                          ;
 ;         6 data inputs ; 14                          ;
-; boundary_port         ; 10                          ;
+; boundary_port         ; 11                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.06                        ;
+; Average LUT depth     ; 2.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -751,41 +754,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri May 08 16:11:02 2026
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Sun May 10 11:32:27 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mini_project -c mini_project
+Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/bouncy_ball.vhd Line: 14
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/bouncy_ball.vhd Line: 14
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/BCD_to_7Seg.vhd Line: 12
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/BCD_to_7Seg.vhd Line: 7
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/BCD_to_7Seg.vhd Line: 12
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file altpll0.vhd
-    Info (12022): Found design unit 1: altpll0-SYN File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd Line: 53
-    Info (12023): Found entity 1: altpll0 File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd Line: 42
+    Info (12022): Found design unit 1: altpll0-SYN File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd Line: 53
+    Info (12023): Found entity 1: altpll0 File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file mini_project.bdf
     Info (12023): Found entity 1: mini_project
 Info (12127): Elaborating entity "mini_project" for the top level hierarchy
 Warning (275011): Block or symbol "MOUSE" of instance "inst5" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst3"
 Info (12128): Elaborating entity "altpll0" for hierarchy "altpll0:inst"
-Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst|altpll:altpll_component" File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd Line: 140
-Info (12130): Elaborated megafunction instantiation "altpll0:inst|altpll:altpll_component" File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd Line: 140
-Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" with the following parameter: File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/altpll0.vhd Line: 140
+Info (12128): Elaborating entity "altpll" for hierarchy "altpll0:inst|altpll:altpll_component" File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd Line: 140
+Info (12130): Elaborated megafunction instantiation "altpll0:inst|altpll:altpll_component" File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd Line: 140
+Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" with the following parameter: File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd Line: 140
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -842,16 +846,16 @@ Info (12133): Instantiated megafunction "altpll0:inst|altpll:altpll_component" w
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll0_altpll.v
-    Info (12023): Found entity 1: altpll0_altpll File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/db/altpll0_altpll.v Line: 29
-Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst2"
+    Info (12023): Found entity 1: altpll0_altpll File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/db/altpll0_altpll.v Line: 30
+Info (12128): Elaborating entity "altpll0_altpll" for hierarchy "altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst1"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst5"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 157
-Info (13000): Registers with preset signals will power-up high File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/mouse.vhd Line: 146
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 157
+Info (13000): Registers with preset signals will power-up high File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -1087,18 +1091,18 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/ngre641/mini-project1/305-main/mini_project/mini_project/db/altpll0_altpll.v Line: 62
+Warning: RST port on the PLL is not properly connected on instance altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/db/altpll0_altpll.v Line: 63
     Info: Must be connected
-Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 215 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 184 logic cells
+    Info (21061): Implemented 203 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 239 warnings
-    Info: Peak virtual memory: 4975 megabytes
-    Info: Processing ended: Fri May 08 16:11:09 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4945 megabytes
+    Info: Processing ended: Sun May 10 11:32:35 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
