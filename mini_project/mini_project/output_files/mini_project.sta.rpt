@@ -1,5 +1,5 @@
 Timing Analyzer report for mini_project
-Sun May 10 11:33:01 2026
+Sun May 10 20:34:41 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -102,14 +102,14 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.17        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.5%      ;
-;     Processor 3            ;   4.4%      ;
-;     Processor 4            ;   4.3%      ;
+;     Processor 2            ;   5.9%      ;
+;     Processor 3            ;   5.7%      ;
+;     Processor 4            ;   5.7%      ;
 +----------------------------+-------------+
 
 
@@ -131,9 +131,9 @@ on the Quartus Prime software download page.
 +------------+-----------------+-----------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                  ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------------+------+
-; 173.61 MHz ; 173.61 MHz      ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 245.88 MHz ; 245.88 MHz      ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ;      ;
-; 260.08 MHz ; 260.08 MHz      ; VGA_SYNC:inst3|vert_sync_out                                                ;      ;
+; 156.57 MHz ; 156.57 MHz      ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 216.54 MHz ; 216.54 MHz      ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ;      ;
+; 237.3 MHz  ; 237.3 MHz       ; VGA_SYNC:inst3|vert_sync_out                                                ;      ;
 +------------+-----------------+-----------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -149,21 +149,21 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.466 ; -147.324      ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.373 ; -17.544       ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -2.845 ; -23.500       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.369 ; -372.543      ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.304 ; -17.600       ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -3.214 ; -25.767       ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                                                   ;
-+-----------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                       ; Slack  ; End Point TNS ;
-+-----------------------------------------------------------------------------+--------+---------------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -0.004 ; -0.004        ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.680  ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.733  ; 0.000         ;
-+-----------------------------------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                                  ;
++-----------------------------------------------------------------------------+-------+---------------+
+; Clock                                                                       ; Slack ; End Point TNS ;
++-----------------------------------------------------------------------------+-------+---------------+
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.188 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.424 ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.534 ; 0.000         ;
++-----------------------------------------------------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------+
@@ -171,7 +171,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; -3.197 ; -51.042       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; -3.152 ; -45.807       ;
 +------------------------------+--------+---------------+
 
 
@@ -180,7 +180,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; 1.736 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; 1.364 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -189,11 +189,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -0.538 ; -27.853       ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -0.538 ; -7.008        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -0.538 ; -71.811       ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -0.538 ; -7.152        ;
 ; inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                    ; 9.949  ; 0.000         ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.262 ; 0.000         ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.311 ; 0.000         ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -208,9 +208,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                  ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------------+------+
-; 172.21 MHz ; 172.21 MHz      ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 245.82 MHz ; 245.82 MHz      ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ;      ;
-; 257.67 MHz ; 257.67 MHz      ; VGA_SYNC:inst3|vert_sync_out                                                ;      ;
+; 163.32 MHz ; 163.32 MHz      ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 222.92 MHz ; 222.92 MHz      ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ;      ;
+; 233.48 MHz ; 233.48 MHz      ; VGA_SYNC:inst3|vert_sync_out                                                ;      ;
 +------------+-----------------+-----------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -220,21 +220,21 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.442 ; -144.238      ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.372 ; -16.511       ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -2.881 ; -24.203       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.222 ; -360.567      ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.335 ; -16.623       ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -3.283 ; -26.287       ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                                    ;
-+-----------------------------------------------------------------------------+--------+---------------+
-; Clock                                                                       ; Slack  ; End Point TNS ;
-+-----------------------------------------------------------------------------+--------+---------------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -0.072 ; -0.080        ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.745  ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.747  ; 0.000         ;
-+-----------------------------------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                   ;
++-----------------------------------------------------------------------------+-------+---------------+
+; Clock                                                                       ; Slack ; End Point TNS ;
++-----------------------------------------------------------------------------+-------+---------------+
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.028 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.473 ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.586 ; 0.000         ;
++-----------------------------------------------------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------+
@@ -242,7 +242,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; -3.137 ; -50.063       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; -3.087 ; -45.349       ;
 +------------------------------+--------+---------------+
 
 
@@ -251,7 +251,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; 1.860 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; 1.495 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -260,11 +260,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -0.538 ; -27.256       ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -0.538 ; -6.964        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -0.538 ; -69.901       ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -0.538 ; -7.089        ;
 ; inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                    ; 9.980  ; 0.000         ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.176 ; 0.000         ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.213 ; 0.000         ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -279,21 +279,21 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -1.941 ; -10.214       ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -1.832 ; -53.974       ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -1.119 ; -8.715        ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -2.012 ; -8.815        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -1.919 ; -157.221      ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -1.234 ; -9.714        ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                                  ;
-+-----------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                       ; Slack ; End Point TNS ;
-+-----------------------------------------------------------------------------+-------+---------------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 0.015 ; 0.000         ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.230 ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.375 ; 0.000         ;
-+-----------------------------------------------------------------------------+-------+---------------+
++------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                   ;
++-----------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                       ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------------+--------+---------------+
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -0.105 ; -0.157        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.253  ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.404  ; 0.000         ;
++-----------------------------------------------------------------------------+--------+---------------+
 
 
 +-------------------------------------------------------+
@@ -301,7 +301,7 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; -1.087 ; -17.341       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; -1.221 ; -17.319       ;
 +------------------------------+--------+---------------+
 
 
@@ -310,7 +310,7 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; 0.686 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; 0.666 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -319,11 +319,11 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.048  ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.122  ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.081  ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.104  ; 0.000         ;
 ; inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                    ; 9.643  ; 0.000         ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.549 ; 0.000         ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.559 ; 0.000         ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -338,9 +338,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -1.682 ; -50.002       ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -1.660 ; -8.564        ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; -0.954 ; -7.443        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -1.781 ; -146.264      ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -1.685 ; -7.290        ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; -1.087 ; -8.381        ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -349,9 +349,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -0.039 ; -0.074        ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.248  ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.374  ; 0.000         ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -0.202 ; -0.360        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.236  ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.407  ; 0.000         ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -360,7 +360,7 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; -1.015 ; -16.210       ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; -1.160 ; -16.619       ;
 +------------------------------+--------+---------------+
 
 
@@ -369,7 +369,7 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER ; 0.677 ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER ; 0.685 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -378,11 +378,11 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                       ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.055  ; 0.000         ;
-; VGA_SYNC:inst3|vert_sync_out                                                ; 0.133  ; 0.000         ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0.098  ; 0.000         ;
+; VGA_SYNC:inst3|vert_sync_out                                                ; 0.098  ; 0.000         ;
 ; inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; CLOCK_50                                                                    ; 9.632  ; 0.000         ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.542 ; 0.000         ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 19.552 ; 0.000         ;
 +-----------------------------------------------------------------------------+--------+---------------+
 
 
@@ -397,18 +397,18 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                                                        ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                             ; -4.466   ; -0.072 ; -3.197   ; 0.677   ; -0.538              ;
+; Worst-case Slack                                                             ; -4.369   ; -0.202 ; -3.152   ; 0.666   ; -0.538              ;
 ;  CLOCK_50                                                                    ; N/A      ; N/A    ; N/A      ; N/A     ; 9.632               ;
-;  MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.466   ; 0.230  ; -3.197   ; 0.677   ; -0.538              ;
-;  VGA_SYNC:inst3|vert_sync_out                                                ; -2.881   ; 0.374  ; N/A      ; N/A     ; -0.538              ;
+;  MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -4.369   ; 0.236  ; -3.152   ; 0.666   ; -0.538              ;
+;  VGA_SYNC:inst3|vert_sync_out                                                ; -3.283   ; 0.404  ; N/A      ; N/A     ; -0.538              ;
 ;  inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.373   ; -0.072 ; N/A      ; N/A     ; 19.176              ;
-; Design-wide TNS                                                              ; -188.368 ; -0.08  ; -51.042  ; 0.0     ; -34.861             ;
+;  inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -3.335   ; -0.202 ; N/A      ; N/A     ; 19.213              ;
+; Design-wide TNS                                                              ; -415.91  ; -0.36  ; -45.807  ; 0.0     ; -78.963             ;
 ;  CLOCK_50                                                                    ; N/A      ; N/A    ; N/A      ; N/A     ; 0.000               ;
-;  MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -147.324 ; 0.000  ; -51.042  ; 0.000   ; -27.853             ;
-;  VGA_SYNC:inst3|vert_sync_out                                                ; -24.203  ; 0.000  ; N/A      ; N/A     ; -7.008              ;
+;  MOUSE:inst5|MOUSE_CLK_FILTER                                                ; -372.543 ; 0.000  ; -45.807  ; 0.000   ; -71.811             ;
+;  VGA_SYNC:inst3|vert_sync_out                                                ; -26.287  ; 0.000  ; N/A      ; N/A     ; -7.152              ;
 ;  inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]   ; N/A      ; N/A    ; N/A      ; N/A     ; 0.000               ;
-;  inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -17.544  ; -0.080 ; N/A      ; N/A     ; 0.000               ;
+;  inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; -17.600  ; -0.360 ; N/A      ; N/A     ; 0.000               ;
 +------------------------------------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -419,6 +419,20 @@ No synchronizer chains to report.
 +----------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; VGA_HS   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_VS   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX1[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_B[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_G[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_R[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -448,6 +462,20 @@ No synchronizer chains to report.
 +----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; VGA_HS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX0[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; HEX1[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; VGA_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; VGA_G[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -463,6 +491,20 @@ No synchronizer chains to report.
 +----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; VGA_HS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; VGA_VS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX0[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; HEX1[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; VGA_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; VGA_G[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; VGA_R[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
@@ -478,6 +520,20 @@ No synchronizer chains to report.
 +----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; VGA_HS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; VGA_VS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX0[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; HEX1[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; VGA_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; VGA_G[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; VGA_R[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -493,6 +549,20 @@ No synchronizer chains to report.
 +----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; VGA_HS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; VGA_VS   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX0[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; HEX1[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; VGA_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; VGA_G[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; VGA_R[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -506,11 +576,11 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                  ; To Clock                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1256     ; 0        ; 0        ; 0        ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1283     ; 0        ; 0        ; 0        ;
 ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1        ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst3|vert_sync_out                                                ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 124      ; 0        ; 0        ; 0        ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 35       ; 0        ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 0        ; 196      ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 90       ; 0        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 0        ; 1329     ;
 ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; VGA_SYNC:inst3|vert_sync_out                                                ; 0        ; 9        ; 0        ; 0        ;
 ; VGA_SYNC:inst3|vert_sync_out                                                ; VGA_SYNC:inst3|vert_sync_out                                                ; 163      ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
@@ -522,11 +592,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                  ; To Clock                                                                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1256     ; 0        ; 0        ; 0        ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1283     ; 0        ; 0        ; 0        ;
 ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 1        ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst3|vert_sync_out                                                ; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 124      ; 0        ; 0        ; 0        ;
-; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 35       ; 0        ;
-; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 0        ; 196      ;
+; inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 90       ; 0        ;
+; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; 0        ; 0        ; 0        ; 1329     ;
 ; MOUSE:inst5|MOUSE_CLK_FILTER                                                ; VGA_SYNC:inst3|vert_sync_out                                                ; 0        ; 9        ; 0        ; 0        ;
 ; VGA_SYNC:inst3|vert_sync_out                                                ; VGA_SYNC:inst3|vert_sync_out                                                ; 163      ; 0        ; 0        ; 0        ;
 +-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+----------+----------+----------+----------+
@@ -573,9 +643,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 17    ; 17   ;
-; Unconstrained Output Ports      ; 7     ; 7    ;
-; Unconstrained Output Port Paths ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 21    ; 21   ;
+; Unconstrained Output Port Paths ; 59    ; 59   ;
 +---------------------------------+-------+------+
 
 
@@ -610,6 +680,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -638,6 +722,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_CLK     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PS2_DAT     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VGA_B[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -654,7 +752,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sun May 10 11:32:56 2026
+    Info: Processing started: Sun May 10 20:34:34 2026
 Info: Command: quartus_sta mini_project -c mini_project
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -900,8 +998,8 @@ Info (332110): Deriving PLL clocks
     Info (332110): create_generated_clock -source {inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|vco0ph[0]} -divide_by 12 -duty_cycle 50.00 -name {inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk} {inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name VGA_SYNC:inst3|vert_sync_out VGA_SYNC:inst3|vert_sync_out
     Info (332105): create_clock -period 1.000 -name MOUSE:inst5|MOUSE_CLK_FILTER MOUSE:inst5|MOUSE_CLK_FILTER
+    Info (332105): create_clock -period 1.000 -name VGA_SYNC:inst3|vert_sync_out VGA_SYNC:inst3|vert_sync_out
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
@@ -912,34 +1010,34 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.466
+Info (332146): Worst-case setup slack is -4.369
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.466            -147.324 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -3.373             -17.544 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -2.845             -23.500 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case hold slack is -0.004
+    Info (332119):    -4.369            -372.543 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -3.304             -17.600 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.214             -25.767 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case hold slack is 0.188
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.004              -0.004 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.680               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.733               0.000 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case recovery slack is -3.197
+    Info (332119):     0.188               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.424               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     0.534               0.000 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case recovery slack is -3.152
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.197             -51.042 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 1.736
+    Info (332119):    -3.152             -45.807 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 1.364
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.736               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     1.364               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -27.853 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538              -7.008 VGA_SYNC:inst3|vert_sync_out 
+    Info (332119):    -0.538             -71.811 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538              -7.152 VGA_SYNC:inst3|vert_sync_out 
     Info (332119):     1.666               0.000 inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.949               0.000 CLOCK_50 
-    Info (332119):    19.262               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.311               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -950,34 +1048,34 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.442
+Info (332146): Worst-case setup slack is -4.222
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.442            -144.238 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -3.372             -16.511 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -2.881             -24.203 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case hold slack is -0.072
+    Info (332119):    -4.222            -360.567 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -3.335             -16.623 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.283             -26.287 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case hold slack is 0.028
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.072              -0.080 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.745               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.747               0.000 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case recovery slack is -3.137
+    Info (332119):     0.028               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.473               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     0.586               0.000 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case recovery slack is -3.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.137             -50.063 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 1.860
+    Info (332119):    -3.087             -45.349 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 1.495
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.860               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     1.495               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -27.256 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -0.538              -6.964 VGA_SYNC:inst3|vert_sync_out 
+    Info (332119):    -0.538             -69.901 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -0.538              -7.089 VGA_SYNC:inst3|vert_sync_out 
     Info (332119):     1.666               0.000 inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.980               0.000 CLOCK_50 
-    Info (332119):    19.176               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.213               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -988,34 +1086,34 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.941
+Info (332146): Worst-case setup slack is -2.012
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.941             -10.214 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -1.832             -53.974 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -1.119              -8.715 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case hold slack is 0.015
+    Info (332119):    -2.012              -8.815 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -1.919            -157.221 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -1.234              -9.714 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case hold slack is -0.105
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.015               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.230               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.375               0.000 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case recovery slack is -1.087
+    Info (332119):    -0.105              -0.157 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.253               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     0.404               0.000 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case recovery slack is -1.221
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.087             -17.341 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.686
+    Info (332119):    -1.221             -17.319 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.686               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is 0.048
+    Info (332119):     0.666               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is 0.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.048               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.122               0.000 VGA_SYNC:inst3|vert_sync_out 
+    Info (332119):     0.081               0.000 VGA_SYNC:inst3|vert_sync_out 
+    Info (332119):     0.104               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
     Info (332119):     1.666               0.000 inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.643               0.000 CLOCK_50 
-    Info (332119):    19.549               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.559               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1024,40 +1122,40 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.682
+Info (332146): Worst-case setup slack is -1.781
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.682             -50.002 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):    -1.660              -8.564 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -0.954              -7.443 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case hold slack is -0.039
+    Info (332119):    -1.781            -146.264 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):    -1.685              -7.290 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -1.087              -8.381 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case hold slack is -0.202
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.039              -0.074 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.248               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.374               0.000 VGA_SYNC:inst3|vert_sync_out 
-Info (332146): Worst-case recovery slack is -1.015
+    Info (332119):    -0.202              -0.360 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.236               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     0.407               0.000 VGA_SYNC:inst3|vert_sync_out 
+Info (332146): Worst-case recovery slack is -1.160
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.015             -16.210 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 0.677
+    Info (332119):    -1.160             -16.619 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 0.685
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.677               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is 0.055
+    Info (332119):     0.685               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is 0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.055               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
-    Info (332119):     0.133               0.000 VGA_SYNC:inst3|vert_sync_out 
+    Info (332119):     0.098               0.000 MOUSE:inst5|MOUSE_CLK_FILTER 
+    Info (332119):     0.098               0.000 VGA_SYNC:inst3|vert_sync_out 
     Info (332119):     1.666               0.000 inst|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.632               0.000 CLOCK_50 
-    Info (332119):    19.542               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.552               0.000 inst|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 237 warnings
     Info: Peak virtual memory: 5311 megabytes
-    Info: Processing ended: Sun May 10 11:33:01 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Sun May 10 20:34:41 2026
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

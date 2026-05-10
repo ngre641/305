@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mini_project
-Sun May 10 11:32:35 2026
+Sun May 10 20:33:38 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -49,14 +49,14 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 10 11:32:35 2026           ;
+; Analysis & Synthesis Status     ; Successful - Sun May 10 20:33:38 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; mini_project                                    ;
 ; Top-level Entity Name           ; mini_project                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 120                                             ;
-; Total pins                      ; 11                                              ;
+; Total registers                 ; 175                                             ;
+; Total pins                      ; 25                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -169,7 +169,8 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,6 +182,7 @@ on the Quartus Prime software download page.
 ; vga_sync.vhd                     ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/vga_sync.vhd        ;         ;
 ; mouse.vhd                        ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd           ;         ;
 ; bouncy_ball.vhd                  ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/bouncy_ball.vhd     ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                     ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/BCD_to_7Seg.vhd     ;         ;
 ; altpll0.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/altpll0.vhd         ;         ;
 ; mini_project.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mini_project.bdf    ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altpll.tdf                     ;         ;
@@ -192,49 +194,51 @@ on the Quartus Prime software download page.
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                               ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                       ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 91                                                                                          ;
-;                                             ;                                                                                             ;
-; Combinational ALUT usage for logic          ; 156                                                                                         ;
-;     -- 7 input functions                    ; 1                                                                                           ;
-;     -- 6 input functions                    ; 14                                                                                          ;
-;     -- 5 input functions                    ; 34                                                                                          ;
-;     -- 4 input functions                    ; 22                                                                                          ;
-;     -- <=3 input functions                  ; 85                                                                                          ;
-;                                             ;                                                                                             ;
-; Dedicated logic registers                   ; 120                                                                                         ;
-;                                             ;                                                                                             ;
-; I/O pins                                    ; 11                                                                                          ;
-;                                             ;                                                                                             ;
-; Total DSP Blocks                            ; 0                                                                                           ;
-;                                             ;                                                                                             ;
-; Total PLLs                                  ; 1                                                                                           ;
-;     -- PLLs                                 ; 1                                                                                           ;
-;                                             ;                                                                                             ;
-; Maximum fan-out node                        ; altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|wire_generic_pll1_outclk ;
-; Maximum fan-out                             ; 77                                                                                          ;
-; Total fan-out                               ; 902                                                                                         ;
-; Average fan-out                             ; 3.00                                                                                        ;
-+---------------------------------------------+---------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 136                          ;
+;                                             ;                              ;
+; Combinational ALUT usage for logic          ; 229                          ;
+;     -- 7 input functions                    ; 1                            ;
+;     -- 6 input functions                    ; 30                           ;
+;     -- 5 input functions                    ; 39                           ;
+;     -- 4 input functions                    ; 33                           ;
+;     -- <=3 input functions                  ; 126                          ;
+;                                             ;                              ;
+; Dedicated logic registers                   ; 175                          ;
+;                                             ;                              ;
+; I/O pins                                    ; 25                           ;
+;                                             ;                              ;
+; Total DSP Blocks                            ; 0                            ;
+;                                             ;                              ;
+; Total PLLs                                  ; 1                            ;
+;     -- PLLs                                 ; 1                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; MOUSE:inst5|MOUSE_CLK_FILTER ;
+; Maximum fan-out                             ; 91                           ;
+; Total fan-out                               ; 1414                         ;
+; Average fan-out                             ; 3.09                         ;
++---------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name    ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
-; |mini_project                            ; 156 (0)             ; 120 (0)                   ; 0                 ; 0          ; 11   ; 0            ; |mini_project                                                                    ; mini_project   ; work         ;
-;    |MOUSE:inst5|                         ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|MOUSE:inst5                                                        ; MOUSE          ; work         ;
-;    |VGA_SYNC:inst3|                      ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|VGA_SYNC:inst3                                                     ; VGA_SYNC       ; work         ;
-;    |altpll0:inst|                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst                                                       ; altpll0        ; work         ;
-;       |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component                               ; altpll         ; work         ;
-;          |altpll0_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ; altpll0_altpll ; work         ;
-;    |bouncy_ball:inst1|                   ; 65 (65)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|bouncy_ball:inst1                                                  ; bouncy_ball    ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                              ; Entity Name     ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
+; |mini_project                            ; 229 (1)             ; 175 (0)                   ; 0                 ; 0          ; 25   ; 0            ; |mini_project                                                                    ; mini_project    ; work         ;
+;    |BCD_to_SevenSeg:inst2|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|BCD_to_SevenSeg:inst2                                              ; BCD_to_SevenSeg ; work         ;
+;    |BCD_to_SevenSeg:inst6|               ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|BCD_to_SevenSeg:inst6                                              ; BCD_to_SevenSeg ; work         ;
+;    |MOUSE:inst5|                         ; 107 (107)           ; 118 (118)                 ; 0                 ; 0          ; 0    ; 0            ; |mini_project|MOUSE:inst5                                                        ; MOUSE           ; work         ;
+;    |VGA_SYNC:inst3|                      ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |mini_project|VGA_SYNC:inst3                                                     ; VGA_SYNC        ; work         ;
+;    |altpll0:inst|                        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst                                                       ; altpll0         ; work         ;
+;       |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component                               ; altpll          ; work         ;
+;          |altpll0_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated ; altpll0_altpll  ; work         ;
+;    |bouncy_ball:inst1|                   ; 65 (65)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |mini_project|bouncy_ball:inst1                                                  ; bouncy_ball     ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -264,8 +268,9 @@ Encoding Type:  One-Hot
 ; MOUSE:inst5|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in ;
 ; MOUSE:inst5|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in ;
 ; bouncy_ball:inst1|ball_y_pos[0]        ; Stuck at GND due to stuck port data_in ;
+; MOUSE:inst5|cursor_row[9]              ; Stuck at GND due to stuck port data_in ;
 ; VGA_SYNC:inst3|pixel_row[9]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
+; Total Number of Removed Registers = 12 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -274,12 +279,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 120   ;
-; Number of registers using Synchronous Clear  ; 20    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 175   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 25    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 71    ;
+; Number of registers using Clock Enable       ; 129   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -303,15 +308,22 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[2] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |mini_project|VGA_SYNC:inst3|v_count[7]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[4] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |mini_project|MOUSE:inst5|new_cursor_row[0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[9]       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |mini_project|VGA_SYNC:inst3|v_count[7]             ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mini_project|MOUSE:inst5|cursor_row[8]             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |mini_project|MOUSE:inst5|cursor_row[7]             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |mini_project|MOUSE:inst5|cursor_column[5]          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mini_project|MOUSE:inst5|cursor_column[6]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mini_project|bouncy_ball:inst1|ball_y_pos[4]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |mini_project|BCD_to_SevenSeg:inst2|SevenSeg_out[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |mini_project|BCD_to_SevenSeg:inst6|SevenSeg_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -710,33 +722,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 120                         ;
+; arriav_ff             ; 175                         ;
 ;     CLR               ; 10                          ;
-;     ENA               ; 46                          ;
+;     ENA               ; 76                          ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 10                          ;
+;     ENA SCLR          ; 18                          ;
+;     ENA SLD           ; 20                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 29                          ;
+;     plain             ; 26                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 156                         ;
-;     arith             ; 61                          ;
+; arriav_lcell_comb     ; 232                         ;
+;     arith             ; 71                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 57                          ;
-;         2 data inputs ; 3                           ;
+;         2 data inputs ; 13                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 94                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 34                          ;
-;         6 data inputs ; 14                          ;
-; boundary_port         ; 11                          ;
+;     normal            ; 150                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 33                          ;
+;         5 data inputs ; 39                          ;
+;         6 data inputs ; 30                          ;
+;     shared            ; 10                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 9                           ;
+; boundary_port         ; 25                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.16                        ;
+; Average LUT depth     ; 2.09                        ;
 +-----------------------+-----------------------------+
 
 
@@ -745,7 +762,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -755,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Sun May 10 11:32:27 2026
+    Info: Processing started: Sun May 10 20:33:20 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mini_project -c mini_project
 Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -855,6 +872,7 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 157
+Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst2"
 Info (13000): Registers with preset signals will power-up high File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
@@ -1093,16 +1111,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance altpll0:inst|altpll:altpll_component|altpll0_altpll:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/cwei0/2026/305_MiniProject/305/mini_project/mini_project/db/altpll0_altpll.v Line: 63
     Info: Must be connected
-Info (21057): Implemented 215 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 5 output pins
+    Info (21059): Implemented 19 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 203 logic cells
+    Info (21061): Implemented 295 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 239 warnings
-    Info: Peak virtual memory: 4945 megabytes
-    Info: Processing ended: Sun May 10 11:32:35 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Sun May 10 20:33:38 2026
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:31
 
 
