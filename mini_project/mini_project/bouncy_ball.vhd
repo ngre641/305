@@ -33,8 +33,8 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
 Red <=  pb1;
-Green <= 0;
-Blue <=  0;
+Green <= '0';
+Blue <=  '0';
 
 
 Move_Ball: process (vert_sync, reset)
