@@ -7,9 +7,7 @@ ENTITY char_position IS
     PORT (
         pixel_row         : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
         pixel_column      : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
-        center_row        : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
-        center_col        : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
-        character_address : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
+        --character_address : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
         size              : IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
 
         font_row          : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -19,6 +17,10 @@ ENTITY char_position IS
 END char_position;
 
 ARCHITECTURE behavior OF char_position IS
+
+    CONSTANT CENTER_ROW  : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10);
+    CONSTANT CENTER_COL  : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(320, 10);
+    CONSTANT character_address : STD_LOGIC_VECTOR(5 DOWNTO 0) := "000111";
 
     SIGNAL half_size     : STD_LOGIC_VECTOR(9 DOWNTO 0);
     SIGNAL top_left_row  : STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -45,8 +47,8 @@ BEGIN
     END PROCESS;
 
     half_size    <= '0' & char_size(9 DOWNTO 1);
-    top_left_row <= center_row - half_size;
-    top_left_col <= center_col - half_size;
+    top_left_row <= CENTER_ROW - half_size;
+    top_left_col <= CENTER_COL - half_size;
     rel_row      <= pixel_row    - top_left_row;
     rel_col      <= pixel_column - top_left_col;
 
