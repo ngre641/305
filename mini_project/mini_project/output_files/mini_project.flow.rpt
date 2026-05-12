@@ -1,5 +1,5 @@
 Flow report for mini_project
-Tue May 12 13:07:47 2026
+Tue May 12 13:59:10 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue May 12 13:07:42 2026           ;
+; Flow Status                     ; Successful - Tue May 12 13:59:05 2026           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; mini_project                                    ;
 ; Top-level Entity Name           ; mini_project                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 124 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 185                                             ;
-; Total pins                      ; 25 / 224 ( 11 % )                               ;
+; Logic utilization (in ALMs)     ; 131 / 18,480 ( < 1 % )                          ;
+; Total registers                 ; 186                                             ;
+; Total pins                      ; 26 / 224 ( 12 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                           ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2026 13:07:00 ;
+; Start date & time ; 05/12/2026 13:58:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mini_project        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948461116699.177854802018300        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948461112938.177855111226340        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_Default ; Top        ;
@@ -98,11 +98,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4974 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:30     ; 1.1                     ; 7686 MB             ; 00:02:49                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4837 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 5259 MB             ; 00:00:04                           ;
-; Total                ; 00:00:45     ; --                      ; --                  ; 00:03:07                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4979 MB             ; 00:00:11                           ;
+; Fitter               ; 00:00:24     ; 1.1                     ; 7681 MB             ; 00:02:54                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4832 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 5257 MB             ; 00:00:04                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:03:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN433588         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; EN433588         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; EN433588         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; EN433588         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN441228         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EN441228         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EN441228         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EN441228         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
