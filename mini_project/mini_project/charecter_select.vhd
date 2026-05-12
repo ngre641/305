@@ -7,19 +7,19 @@ ENTITY char_position IS
     PORT (
         pixel_row         : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
         pixel_column      : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);
-        --character_address : IN  STD_LOGIC_VECTOR(5 DOWNTO 0);
         size              : IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
 
         font_row          : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
         font_col          : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-        char_address_out  : OUT STD_LOGIC_VECTOR(5 DOWNTO 0)
+        char_address_out  : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+        in_window         : OUT STD_LOGIC
     );
 END char_position;
 
 ARCHITECTURE behavior OF char_position IS
 
-    CONSTANT CENTER_ROW  : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10);
-    CONSTANT CENTER_COL  : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(320, 10);
+    CONSTANT CENTER_ROW        : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10);
+    CONSTANT CENTER_COL        : STD_LOGIC_VECTOR(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(320, 10);
     CONSTANT character_address : STD_LOGIC_VECTOR(5 DOWNTO 0) := "000111";
 
     SIGNAL half_size     : STD_LOGIC_VECTOR(9 DOWNTO 0);
@@ -51,6 +51,14 @@ BEGIN
     top_left_col <= CENTER_COL - half_size;
     rel_row      <= pixel_row    - top_left_row;
     rel_col      <= pixel_column - top_left_col;
+
+    in_window <= '1' WHEN (
+        size /= "000" AND
+        pixel_row    >= top_left_row AND
+        pixel_row    <  top_left_row + char_size AND
+        pixel_column >= top_left_col AND
+        pixel_column <  top_left_col + char_size
+    ) ELSE '0';
 
     PROCESS(size, rel_row, rel_col)
     BEGIN
