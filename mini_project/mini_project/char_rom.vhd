@@ -11,8 +11,9 @@ ENTITY char_rom IS
 	(
 		character_address	:	IN STD_LOGIC_VECTOR (5 DOWNTO 0);
 		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
-		clock				: 	IN STD_LOGIC ;
-		rom_mux_output		:	OUT STD_LOGIC
+		clock				: 	IN STD_LOGIC;
+		in_window			:	IN STD_LOGIC;
+		char_on				:	OUT STD_LOGIC
 	);
 END char_rom;
 
@@ -21,6 +22,7 @@ ARCHITECTURE SYN OF char_rom IS
 
 	SIGNAL rom_data		: STD_LOGIC_VECTOR (7 DOWNTO 0);
 	SIGNAL rom_address	: STD_LOGIC_VECTOR (8 DOWNTO 0);
+	SIGNAL rom_mux_output : STD_LOGIC;
 
 	COMPONENT altsyncram
 	GENERIC (
@@ -71,7 +73,8 @@ BEGIN
 		q_a => rom_data
 	);
 
-	rom_address <= character_address & font_row;
-	rom_mux_output <= rom_data (CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
+	rom_address    <= character_address & font_row;
+	rom_mux_output <= rom_data(CONV_INTEGER(NOT font_col(2 DOWNTO 0)));
+	char_on        <= rom_mux_output AND in_window;
 
 END SYN;
